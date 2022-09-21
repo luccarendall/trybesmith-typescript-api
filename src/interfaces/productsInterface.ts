@@ -1,7 +1,7 @@
-interface ProductsIF {
+interface ProductsInterface {
   id?: number;
   name: string;
   amount: string;
 }
 
-export default ProductsIF;
+export default ProductsInterface;
