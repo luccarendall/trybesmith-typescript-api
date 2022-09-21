@@ -11,4 +11,12 @@ const createProduct = async (product: ProductsInterface): Promise<ResultSetHeade
   return data;
 };
 
-export default { createProduct };
+const selectProductsAll = async (): Promise<ProductsInterface[]> => {
+  const [result] = await connection.execute('SELECT * FROM Trybesmith.Products');
+  return result as ProductsInterface[];
+};
+
+export default { 
+  createProduct, 
+  selectProductsAll,
+};

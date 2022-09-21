@@ -10,4 +10,12 @@ const createProduct = async (data: ProductsInterface): Promise<ProductsInterface
   return productInfo;
 };
 
-export default { createProduct };
+const selectProductsAll = async (): Promise<ProductsInterface[]> => {
+  const products = await ProductModel.selectProductsAll();
+  return products;
+};
+
+export default { 
+  createProduct, 
+  selectProductsAll,
+};
